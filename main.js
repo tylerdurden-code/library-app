@@ -1,20 +1,26 @@
-let myLibary = [];
+var myLibrary = [];
 
-function Book(title,author,pages,readit) {
-    this.title = title
-    this.author = author
-    this.pages = pages
-    this.readit = readit
+function addBookToLibrary(obj) {
+    myLibrary.push(obj);
 }
-function addBookToLibrary(title,author,pages,readit) {
-    var book = new Book(title,author,pages,readit)
-    myLibary.push(book);
+
+class Book {
+    constructor(author,title,nPages,isRead) {
+        this.author = author;
+        this.title = title;
+        this.nPages = nPages;
+        this.isRead = isRead;
+    }
 }
-addBookToLibrary("1234","1234","1234",true);
-addBookToLibrary("1234","1234","1234",true);
-addBookToLibrary("1234","1234","1234",true);
-addBookToLibrary("1234","1234","1234",true);
 
+var book1 = new Book("whateaaver","whatevsserrr",123,true);
+addBookToLibrary(book1);
+var book2 = new Book("whatever","whatevferrr",123,true);
+addBookToLibrary(book2);
+var book3 = new Book("whatever","whatedsafverrr",123,true);
+addBookToLibrary(book3);
+var book4 = new Book("whataaever","whateverrr",123,true);
+addBookToLibrary(book4);
 
-var section1 = document.getElementById("section1")
-section1.innerHTML = JSON.stringify(myLibary, null, 4);
+console.log(myLibrary)
+
