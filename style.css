@@ -45,3 +45,12 @@ body {
 .section1 > br {
     background-color: red;
 }
+#section1 {
+    border: 5px solid green;
+    display: flex;
+}
+.form {
+    border: 5px solid green;
+    width: 40%;
+    height: 720px;
+}

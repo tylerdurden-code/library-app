@@ -14,7 +14,36 @@
         </div>
         <div class="mainpage">
             <button id="add-book">+ Add Book</button>
-            <div id="section1"></div>
+            <div id="section1">
+                <div class="form">
+                    <form id="book-form" action="#" method="post">
+                        <legend>Book Form</legend>
+                        <div class="form-box">
+                            <label for="author">Author</label>
+                            <input type="text" name="author" id="author" required>
+                        </div>
+                        <div class="form-box">
+                            <label for="title">Title</label>
+                            <input type="text" name="title" id="title" required>
+                        </div>
+                        <div class="form-box" >
+                            <label for="pages">Number of Pages</label>
+                            <input type="text" name="pages" id="pages" required>
+                        </div>
+                        <div class="form-box">
+                            <p>Have you read it?</p>
+                            <input type="radio" name="readit" id="yes" value="yes" required >
+                            <label for="yes">Yes</label>
+                            <input type="radio" name="readit" id="no" value="no" required checked>
+                            <label for="no">No</label>
+                        </div>
+                        <button type="submit">+ Add Book</button>
+                    </form>
+                </div>
+                <div class="panel" id="panel">
+                    <pre id=""></pre>
+                </div>
+            </div>
         </div>
         <div class="footer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, laudantium.</div>
     </div>
