@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    background-color: #5DADE2 ;
+    background-color: #FFF8DC;
 }
 .container {
     display: flex;
@@ -15,12 +15,12 @@ body {
     height: 100vh;
 }
 .header {
-    background-color: #C0C0C0;
     width: 100%;
     text-align: center;
     padding: 10px;
     border: 5px solid green;
-
+    font-size: 2rem;
+    color: red;
 }
 .mainpage {
     border: 5px solid green;
@@ -53,4 +53,52 @@ body {
     border: 5px solid green;
     width: 40%;
     height: 720px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-box > input {
+    width: 150px;
+    margin: 4px 0;
+    border: none;
+    border-bottom: 2px solid black;
+    /* border-radius: 6px; */
+    background-color: #FFF8DC;
+}
+.form-box,.form-box-radio {
+    font-size: 2rem;
+}
+#book-form > button {
+    background-color: red;
+    border: none;
+    color: black;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition:.4s;
+    margin-top: 5px;
+}
+#book-form > button:hover {
+    background-color: #FFF8DC;
+    color: black;
+    border: 3px solid red;
+}
+#book-form {
+    border: 6px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+.cards {
+    background-color: lightgray;
+    font-size: 2rem;
+    padding: 7px;
+    border: 2px solid black;
+}
+.panel {
+    display: grid;
+    gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr ;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding: 10px;
 }
