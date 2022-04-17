@@ -3,7 +3,9 @@ var myLibrary = [];
 function addBookToLibrary(obj) {
     myLibrary.push(obj);
 }
-
+function deleteObj(obj) {
+    delete obj
+}
 class Book {
     constructor(author,title,nPages,isRead) {
         this.author = author;
@@ -26,6 +28,7 @@ class Book {
 
 const form = document.getElementById("book-form");
 const panel = document.getElementById("panel")
+var i = 0;
 // panel.innerHTML = JSON.stringify(myLibrary, null, 2);
 
 form.addEventListener("submit",(e) => {
@@ -40,8 +43,22 @@ form.addEventListener("submit",(e) => {
     addBookToLibrary(book);
     form.reset()
     const newDiv = document.createElement("div")
+    const newBtn = document.createElement("button")
+    newBtn.setAttribute('id',"delBtn")
     newDiv.setAttribute('class','cards')
+    newDiv.setAttribute('id',`card${i}`)
+    newDiv.setAttribute('data-init',i);
+    newBtn.setAttribute('data-init',i);
     newDiv.innerHTML = `Author:${book.author}<br>Title:${book.title}<br>
     Pages:${book.nPages}<br>Read It:${book.isRead}`
-    panel.appendChild(newDiv)   
+    newBtn.innerHTML = "Del"
+    panel.appendChild(newDiv);
+    newDiv.appendChild(newBtn);
+    newBtn.addEventListener('click',(e) => {
+        var child = document.getElementById(`card${newBtn.dataset.init}`)
+        panel.removeChild(child);
+
+    })
+    i++
 })
+

@@ -91,14 +91,25 @@ body {
 }
 .cards {
     background-color: lightgray;
-    font-size: 2rem;
+    font-size: 1.8rem;
     padding: 7px;
     border: 2px solid black;
+    border-radius: 8px;
+    height: max-content;
 }
 .panel {
     display: grid;
     gap: 10px;
   grid-template-columns: 1fr 1fr 1fr 1fr ;
-  grid-template-rows: 1fr 1fr 1fr;
   padding: 10px;
+}
+#delBtn {
+    background-color: red;
+    padding: 5px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    width: 70%;
+    height:50px;
+    
 }
