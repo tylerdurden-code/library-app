@@ -1,4 +1,4 @@
-var myLibrary = [];
+12var myLibrary = [];
 
 function addBookToLibrary(obj) {
     myLibrary.push(obj);
