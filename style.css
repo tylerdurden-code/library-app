@@ -64,6 +64,7 @@ body {
     border-bottom: 2px solid black;
     /* border-radius: 6px; */
     background-color: #FFF8DC;
+    font-size: 1.3rem;
 }
 .form-box,.form-box-radio {
     font-size: 2rem;
@@ -104,13 +105,13 @@ body {
   padding: 10px;
 }
 #delBtn {
-    background-color: red;
+    background-color: lightgray ;
     padding: 5px;
     font-size: 1rem;
     border: none;
     cursor: pointer;
-    width: 70%;
-    height:50px;
+    width: fit-content;
+    height:fit-content;
     
 }
 .footer > a > img {
@@ -127,4 +128,41 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 1.7rem;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    margin: 0 10px;
+}
+.slider {
+    position:absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #CCC;
+    transition: .4s;
+    border-radius: 34px;
+}
+.switch input {display: none;}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 5px;
+    bottom: 5px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+input:checked + .slider {
+    background-color: greenyellow;
+}
+
+input:checked + .slider::before {
+    transform: translateX(1em);
 }
