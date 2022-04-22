@@ -15,13 +15,13 @@ function res() {
         return new Book(author.value,title.value,pages.value,"No")
     }
 }
-function createDiv(book) {
+function createDiv(book,status=book.isRead) {
     var newDiv = document.createElement("div")
     newDiv.setAttribute('class','cards')
     newDiv.setAttribute('id',`card${i}`)
     newDiv.setAttribute('data-init',i);
     newDiv.innerHTML = `Author:${book.author}<br>Title:${book.title}<br>
-    Pages:${book.nPages}<br>Read It:${book.isRead}<br>`
+    Pages:${book.nPages}<br>Read It:${status}<br>`
     return newDiv
 }
 function createBtn() {
@@ -45,6 +45,7 @@ function createToggle(isRead) {
     newToggle.setAttribute("class","switch")
     var input = document.createElement("input")
     input.setAttribute("type","checkbox")
+    input.setAttribute("class",'toggleBtn')
     if (isRead === "Yes") {
         input.setAttribute("checked","checked")
     }
@@ -65,6 +66,7 @@ class Book {
 
 const form = document.getElementById("book-form");
 const panel = document.getElementById("panel")
+const toggleBtn = document.querySelector("input[type=checkbox][class=toggleBtn]")
 var i = 0;
 
 form.addEventListener("submit",(e) => {
@@ -84,6 +86,12 @@ form.addEventListener("submit",(e) => {
         var child = document.getElementById(`card${newBtn.dataset.init}`)
         panel.removeChild(child);
 
+    })
+    newToggle.addEventListener('change',(e) => {
+        // var ini = newBtn.dataset.init;
+        if (e.target.checked) {
+            console.log('checked')              
+        }
     })
     i++
 })
