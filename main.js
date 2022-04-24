@@ -20,8 +20,11 @@ function createDiv(book,status=book.isRead) {
     newDiv.setAttribute('class','cards')
     newDiv.setAttribute('id',`card${i}`)
     newDiv.setAttribute('data-init',i);
-    newDiv.innerHTML = `Author:${book.author}<br>Title:${book.title}<br>
+    var p = document.createElement('p')
+    p.setAttribute('data-init',i);
+    p.innerHTML = `Author:${book.author}<br>Title:${book.title}<br>
     Pages:${book.nPages}<br>Read It:${status}<br>`
+    newDiv.appendChild(p)
     return newDiv
 }
 function createBtn() {
@@ -90,9 +93,15 @@ form.addEventListener("submit",(e) => {
     newToggle.addEventListener('change',(e) => {
         // var ini = newBtn.dataset.init;
         if (e.target.checked) {
-            console.log('checked')              
+            var p = newToggle.parentNode.querySelector('p')
+            p.innerHTML = `Author:${book.author}<br>Title:${book.title}<br>
+            Pages:${book.nPages}<br>Read It:Yes<br>`         
+        }
+        else {
+            var p = newToggle.parentNode.querySelector('p')
+            p.innerHTML = `Author:${book.author}<br>Title:${book.title}<br>
+            Pages:${book.nPages}<br>Read It:No<br>`  
         }
     })
     i++
 })
-
