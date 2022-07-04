@@ -1,18 +1,15 @@
-*,*::after,*::before {
+*,
+*::after,
+*::before {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
 body {
     background-color: #FFF8DC;
 }
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    height: 100vh;
-}
+
 .header {
     width: 100%;
     text-align: center;
@@ -20,29 +17,36 @@ body {
     font-size: 2rem;
     color: red;
 }
+
 .mainpage {
     text-align: center;
     flex: 1;
     width: 100%;
     gap: 10px;
 }
+
 #add-book {
     padding: 10px;
 }
+
 .section1 {
     height: 90%;
 }
+
 .footer {
     margin-top: auto;
     width: 100%;
     height: 60px;
 }
-.section1 > br {
+
+.section1>br {
     background-color: red;
 }
+
 #section1 {
     display: flex;
 }
+
 .form {
     width: 40%;
     height: 720px;
@@ -50,7 +54,8 @@ body {
     justify-content: center;
     align-items: center;
 }
-.form-box > input {
+
+.form-box>input {
     width: 150px;
     margin: 4px 0;
     border: none;
@@ -59,10 +64,13 @@ body {
     background-color: #FFF8DC;
     font-size: 1.3rem;
 }
-.form-box,.form-box-radio {
+
+.form-box,
+.form-box-radio {
     font-size: 2rem;
 }
-#book-form > button {
+
+#book-form>button {
     background-color: red;
     border: none;
     color: black;
@@ -70,19 +78,22 @@ body {
     text-decoration: none;
     margin: 4px 2px;
     cursor: pointer;
-    transition:.4s;
+    transition: .4s;
     margin-top: 5px;
 }
-#book-form > button:hover {
+
+#book-form>button:hover {
     background-color: #FFF8DC;
     color: black;
     border: 3px solid red;
 }
+
 #book-form {
     border: 6px solid black;
     border-radius: 5px;
     padding: 10px;
 }
+
 .cards {
     background-color: lightgray;
     font-size: 1.8rem;
@@ -91,30 +102,35 @@ body {
     border-radius: 8px;
     height: max-content;
 }
+
 .panel {
     display: grid;
     gap: 10px;
-  grid-template-columns: 1fr 1fr 1fr 1fr ;
-  padding: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 10px;
 }
+
 #delBtn {
-    background-color: lightgray ;
+    background-color: lightgray;
     padding: 5px;
     font-size: 1rem;
     border: none;
     cursor: pointer;
     width: fit-content;
-    height:fit-content;
-    
+    height: fit-content;
+
 }
-.footer > a > img {
+
+.footer>a>img {
     height: 30px;
     width: 30px;
 }
-.footer > a > img:hover {
+
+.footer>a>img:hover {
     height: 40px;
     width: 40px;
 }
+
 .footer {
     display: flex;
     gap: 5px;
@@ -122,6 +138,7 @@ body {
     align-items: center;
     font-size: 1.7rem;
 }
+
 .switch {
     position: relative;
     display: inline-block;
@@ -129,8 +146,9 @@ body {
     height: 30px;
     margin: 0 10px;
 }
+
 .slider {
-    position:absolute;
+    position: absolute;
     cursor: pointer;
     top: 0;
     left: 0;
@@ -140,7 +158,11 @@ body {
     transition: .4s;
     border-radius: 34px;
 }
-.switch input {display: none;}
+
+.switch input {
+    display: none;
+}
+
 .slider:before {
     position: absolute;
     content: "";
@@ -152,10 +174,11 @@ body {
     transition: 0.4s;
     border-radius: 50px;
 }
-input:checked + .slider {
+
+input:checked+.slider {
     background-color: greenyellow;
 }
 
-input:checked + .slider::before {
+input:checked+.slider::before {
     transform: translateX(1em);
 }
